@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login And Sign Up Form</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="hero">
+            <div class="form-box">
+                <div class="btn-box">
+                    <div id="btn"></div>
+                    <button type="button" class="toggle-btn" onclick="logForm()">Log In</button>
+                    <button type="button" class="toggle-btn" onclick="regForm()">Sign Up</button>
+                </div>
+                <div class="logo" id="lr-page">
+                    <a href="./landing-page.html" class="logo-black"><img class="logo-black" src="./assets/logos/mp_black_small.png" alt="logo"></a>
+                </div>
+                <form action="" id="login-page" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                    <button class="submit-btn">Log in</button>
+                </form>
+                <form action="" id="register-page" class="input-group">
+                    <input type="text" class="input-field" placeholder="User Id" required>
+                    <input type="email" class="input-field" placeholder="Email Id" required>
+                    <input type="text" class="input-field" placeholder="Enter Password" required>
+                    <input type="checkbox" class="checkbox"><span>Remember Password</span>
+                    <button class="submit-btn">Log in</button>
+                </form>
+            </div>
+        </div>
+    </body>
+    <script>
+        var log = document.getElementById("login-page");
+        var reg = document.getElementById("register-page");
+        var btn = document.getElementById("btn");
+
+        function regForm() {
+            log.style.left = "-400px";
+            reg.style.left = "50px";
+            btn.style.left = "110px";
+        }
+
+        function logForm() {
+            log.style.left = "50px";
+            reg.style.left = "450px";
+            btn.style.left = "0px";
+        }
+    </script>
+</html>
